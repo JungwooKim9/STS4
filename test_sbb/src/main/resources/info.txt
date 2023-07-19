@@ -6,3 +6,16 @@
 5. QuestionRepository, AnswerRepository
 6. JUnitTest를 사용해서 Question 테이블에 값을 Insert
 7. JUnitTest를 사용해서 DB의 값을 불러와서 출력 구문과 일치하는지 테스트
+
+============================================================
+
+1. QuestionRepository
+	- subject 컬럼을 기준으로 검색 "%날짜%"
+		select * from question where subject like '%?%'	===> 메소드 생성
+	- content 컬럼을 기준으로 검색 "%내용%"
+		select * from question where content like '%?%'	===> 메소드 생성
+	- subject or content 동시에 검색	===> 메소드 생성
+	
+2. Answer 테이블에 값을 insert	===> Question_id 컬럼을 참조해서 insert
+	AnswerRepository.save()
+	

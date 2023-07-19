@@ -35,7 +35,7 @@ class TestSbbApplicationTests {
 		qr.save(q2);
 	}
 	
-	@Test
+//	@Test
 	void subjectTest() {
 		List<Question> all = qr.findAll();
 		
@@ -43,6 +43,26 @@ class TestSbbApplicationTests {
 		
 		assertEquals("서울 맛집은?", q.getSubject());
 		
+	}
+	
+//	@Test
+	void searchSubjectLike() {
+		List<Question> all = qr.findBySubjectLike("%맛집%");
+		
+		Question q = all.get(0);
+		
+		assertEquals(1, all.size());
+		assertEquals(1, q.getId());
+	}
+	
+	@Test
+	void searchContentLike() {
+		List <Question> all = qr.findByContentLike("%인기%");
+		
+		Question q = all.get(0);
+		
+		assertEquals(1, all.size());
+		assertEquals(2, q.getId());
 	}
 
 }

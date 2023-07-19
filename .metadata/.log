@@ -2703,3 +2703,853 @@ Binding(CTRL+SHIFT+C,
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-18 18:42:25.239
 !MESSAGE Classpath changed for project: sbb
+!SESSION 2023-07-19 09:34:25.841 -----------------------------------------------
+eclipse.buildId=4.19.0.202306150758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.emf.ecore 2 0 2023-07-19 09:34:26.750
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY org.eclipse.jface 2 0 2023-07-19 09:40:19.399
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-07-19 09:40:19.399
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-19 09:40:21.955
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\sts-4.19.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin\javaw.exe
+-cp
+C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\classes;C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Dlsp.completions.indentation.enable=true
+-Xmx1024m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/workspace-STS4/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1689727221955
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 09:40:21.956
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-19 09:40:21.972
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 9724
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-07-19 09:40:22.043
+!MESSAGE org.springframework.ide.vscode.commons.protocol.spring.SpringModelLanguageServer cannot be found by org.springframework.tooling.boot.ls_1.47.0.202306150731
+!STACK 0
+java.lang.ClassNotFoundException: org.springframework.ide.vscode.commons.protocol.spring.SpringModelLanguageServer cannot be found by org.springframework.tooling.boot.ls_1.47.0.202306150731
+	at org.eclipse.osgi.internal.loader.BundleLoader.generateException(BundleLoader.java:541)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:536)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:622)
+	at org.eclipse.lsp4e.LanguageServersRegistry$ExtensionLanguageServerDefinition.getServerInterface(LanguageServersRegistry.java:196)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$1(LanguageServerWrapper.java:291)
+	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+
+!ENTRY org.eclipse.jface 2 0 2023-07-19 09:40:22.847
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-07-19 09:40:22.848
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-07-19 09:40:23.452
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\hi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 09:40:23.510
+!MESSAGE Boot project ADDED: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 09:40:23.510
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 09:40:23.512
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 09:40:23.513
+!MESSAGE Boot project ADDED: test_project_gradle
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 09:40:23.513
+!MESSAGE Boot project ADDED: test_project_maven
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 09:40:23.514
+!MESSAGE Boot project ADDED: test_sbb
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-07-19 10:05:31.037
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 10:16:57.732
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 10:21:32.303
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 10:42:36.269
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-07-19 10:45:28.790
+!MESSAGE Could not get trigger characters due to timeout after 50 miliseconds
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getFuture(LSContentAssistProcessor.java:280)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:316)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1248)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$InternalListener.verifyKey(ContentAssistant.java:834)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4274)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5742)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5426)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4274)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4865)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4743)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5040)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3658)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-07-19 10:45:28.842
+!MESSAGE Could not get trigger characters due to timeout after 50 miliseconds
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getFuture(LSContentAssistProcessor.java:280)
+	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:316)
+	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1248)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:345)
+	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:374)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:70)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4274)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5742)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5426)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4274)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4865)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4743)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5040)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3658)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 10:48:56.156
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 10:49:53.387
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 10:53:28.257
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 10:54:19.850
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:01:19.453
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:01:29.642
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:02:40.156
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:02:51.619
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:03:25.452
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:05:30.508
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:20:08.818
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:38:28.287
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:41:48.571
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:46:35.483
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-07-19 11:54:09.478
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:58:52.230
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 11:59:11.628
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:00:35.334
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:00:39.477
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:06:30.981
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:09:43.915
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:11:35.253
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:12:27.944
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:12:38.510
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:17:23.669
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-07-19 12:49:15.474
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:49:16.799
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:49:20.107
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:52:30.833
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:58:43.466
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.eclipse.buildship.core 2 3 2023-07-19 12:59:02.236
+!MESSAGE Launch Gradle tests failed due to an error connecting to the Gradle build.
+!STACK 0
+org.gradle.tooling.TestExecutionException: Could not execute tests using connection to Gradle distribution 'https://services.gradle.org/distributions/gradle-8.1.1-bin.zip'.
+	at org.gradle.tooling.internal.consumer.ExceptionTransformer.transform(ExceptionTransformer.java:49)
+	at org.gradle.tooling.internal.consumer.ExceptionTransformer.transform(ExceptionTransformer.java:29)
+	at org.gradle.tooling.internal.consumer.ResultHandlerAdapter.onFailure(ResultHandlerAdapter.java:43)
+	at org.gradle.tooling.internal.consumer.async.DefaultAsyncConsumerActionExecutor$1$1.run(DefaultAsyncConsumerActionExecutor.java:69)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+	at org.gradle.tooling.internal.consumer.BlockingResultHandler.getResult(BlockingResultHandler.java:46)
+	at org.gradle.tooling.internal.consumer.DefaultTestLauncher.run(DefaultTestLauncher.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.buildship.core.internal.workspace.ConnectionAwareLauncherProxy.invokeRun(ConnectionAwareLauncherProxy.java:102)
+	at org.eclipse.buildship.core.internal.workspace.ConnectionAwareLauncherProxy.invoke(ConnectionAwareLauncherProxy.java:92)
+	at jdk.proxy21/jdk.proxy21.$Proxy96.run(Unknown Source)
+	at org.eclipse.buildship.core.internal.launch.RunGradleJvmTestLaunchRequestJob$RunLaunchRequestJob.executeLaunch(RunGradleJvmTestLaunchRequestJob.java:128)
+	at org.eclipse.buildship.core.internal.launch.RunGradleJvmTestLaunchRequestJob$RunLaunchRequestJob.executeLaunch(RunGradleJvmTestLaunchRequestJob.java:89)
+	at org.eclipse.buildship.core.internal.launch.BaseLaunchRequestJob.executeLaunch(BaseLaunchRequestJob.java:66)
+	at org.eclipse.buildship.core.internal.launch.BaseLaunchRequestJob.runInToolingApi(BaseLaunchRequestJob.java:42)
+	at org.eclipse.buildship.core.internal.launch.BaseLaunchRequestJob.runInToolingApi(BaseLaunchRequestJob.java:34)
+	at org.eclipse.buildship.core.internal.operation.ToolingApiJob$1.runInToolingApi(ToolingApiJob.java:54)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2382)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2407)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.operation.ToolingApiJob.run(ToolingApiJob.java:65)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.gradle.api.tasks.testing.TestExecutionException: No matching tests found in any candidate test task.
+    Requested tests:
+        Test method com.mysite.sbb.SbbApplicationTests.serachSubjectLike()
+	at org.gradle.tooling.internal.provider.runner.TestExecutionResultEvaluator.evaluate(TestExecutionResultEvaluator.java:77)
+	at org.gradle.tooling.internal.provider.runner.TestExecutionRequestActionRunner.run(TestExecutionRequestActionRunner.java:61)
+	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+	at org.gradle.internal.buildtree.ProblemReportingBuildActionRunner.run(ProblemReportingBuildActionRunner.java:49)
+	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:65)
+	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:140)
+	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.lambda$execute$0(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:122)
+	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:40)
+	at org.gradle.internal.buildtree.InitDeprecationLoggingActionExecutor.execute(InitDeprecationLoggingActionExecutor.java:58)
+	at org.gradle.internal.buildtree.DefaultBuildTreeContext.execute(DefaultBuildTreeContext.java:40)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.lambda$execute$0(BuildTreeLifecycleBuildActionExecutor.java:65)
+	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:53)
+	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.execute(BuildTreeLifecycleBuildActionExecutor.java:65)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:61)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor.execute(RunAsBuildOperationBuildActionExecutor.java:57)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.lambda$execute$0(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:249)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:109)
+	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.execute(RunAsWorkerThreadBuildActionExecutor.java:36)
+	at org.gradle.tooling.internal.provider.continuous.ContinuousBuildActionExecutor.execute(ContinuousBuildActionExecutor.java:110)
+	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecutor.execute(SubscribableBuildActionExecutor.java:64)
+	at org.gradle.internal.session.DefaultBuildSessionContext.execute(DefaultBuildSessionContext.java:46)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:100)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:88)
+	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:69)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:62)
+	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:41)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:64)
+	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:32)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:50)
+	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:38)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:47)
+	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:31)
+	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:65)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:78)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:75)
+	at org.gradle.util.internal.Swapper.swap(Swapper.java:38)
+	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:64)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 12:59:59.780
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:00:01.010
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:03:29.318
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:04:10.787
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:06:29.320
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:06:45.075
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:07:51.719
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:08:04.722
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:09:38.597
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:13:13.345
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:13:23.418
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:13:34.815
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:14:01.552
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:14:48.569
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:14:53.113
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:15:05.561
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:15:41.250
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:16:56.309
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 13:18:39.428
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 14:44:42.777
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 14:46:26.947
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 14:47:10.029
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 14:49:54.096
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 14:50:11.697
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 14:52:08.438
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 14:55:07.363
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 14:57:04.313
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 14:58:16.386
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:00:39.262
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:01:36.827
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:02:11.267
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:08:35.641
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:11:31.635
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:12:23.280
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:13:41.726
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:15:23.961
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:18:12.826
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:18:26.257
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:19:47.718
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:36:36.421
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:40:02.180
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:43:58.190
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:44:11.234
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:44:41.554
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:45:22.833
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:47:32.733
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:49:08.962
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:49:29.433
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:50:24.513
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:51:00.887
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:51:10.868
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:51:23.399
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:52:59.317
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:58:14.383
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:58:17.870
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:58:37.179
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:59:04.113
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:59:20.913
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 15:59:41.662
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:00:27.728
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:02:21.765
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:08:15.762
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:12:04.284
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:15:32.607
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:15:50.645
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:39:39.895
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:39:58.984
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:48:35.663
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:52:36.390
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:53:47.075
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:56:28.257
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:57:28.138
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:57:31.253
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 16:58:30.491
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:05:51.504
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:06:00.202
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:08:26.496
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:09:44.909
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:14:20.323
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:15:06.173
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:15:55.769
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:16:31.910
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:17:16.371
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:18:39.852
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:19:06.323
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:20:07.662
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:20:28.004
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:20:33.573
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:20:46.939
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:21:12.433
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:21:30.542
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:21:40.220
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:21:51.112
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:21:59.611
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:22:49.030
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:23:14.071
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:23:41.843
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:24:06.525
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:24:22.355
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:24:58.257
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:33:11.233
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:57:04.970
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 17:58:12.457
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:02:12.413
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:05:27.844
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:08:25.936
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:08:42.596
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:09:40.189
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:17:48.645
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:18:58.319
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:20:45.848
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:21:04.712
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:21:42.807
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:21:53.647
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:26:40.078
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:27:03.962
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:28:26.972
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:28:37.786
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:28:59.916
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:29:12.599
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:29:36.918
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:29:58.343
+!MESSAGE Classpath changed for project: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-19 18:30:07.441
+!MESSAGE Classpath changed for project: test_sbb
