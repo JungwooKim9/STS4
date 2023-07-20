@@ -9,12 +9,21 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.mysite.test_sbb.answer.Answer;
+import com.mysite.test_sbb.answer.AnswerRepository;
+import com.mysite.test_sbb.question.Question;
+import com.mysite.test_sbb.question.QuestionRepository;
+
+
 @SpringBootTest
 class TestSbbApplicationTests {
 
 	// QuestionRepository 객체 주입
 	@Autowired
 	private QuestionRepository qr;
+	
+	@Autowired
+	private AnswerRepository ar;
 
 //	@Test
 	void contextLoads() {
@@ -55,7 +64,7 @@ class TestSbbApplicationTests {
 		assertEquals(1, q.getId());
 	}
 	
-	@Test
+//	@Test
 	void searchContentLike() {
 		List <Question> all = qr.findByContentLike("%인기%");
 		
@@ -63,6 +72,20 @@ class TestSbbApplicationTests {
 		
 		assertEquals(1, all.size());
 		assertEquals(2, q.getId());
+	}
+	
+	@Test
+	void insertAnswer() {
+		Question q = new Question();
+		q.setId(2);
+		
+		Answer a = new Answer();
+		
+		a.setContent("베이비 폭군이 재밌습니다.");
+		a.setCreateDate(LocalDateTime.now());
+		a.setQuestion(q);
+		
+		ar.save(a);
 	}
 
 }

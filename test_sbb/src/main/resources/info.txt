@@ -18,4 +18,15 @@
 	
 2. Answer 테이블에 값을 insert	===> Question_id 컬럼을 참조해서 insert
 	AnswerRepository.save()
+
+============================================================
+
+1. QuestionController
+2. QuestionService
+
+	client 요청: http://localhost:9898/question/list
+	"/question/list"
+	Question 테이블의 값을 읽어와서 client view 페이지로 전송 (question_list.html)
+	
+	QuestionService
 	
