@@ -30,3 +30,16 @@
 	
 	QuestionService
 	
+============================================================
+
+1. question 테이블의 전체 레코드를 읽어와서 view로 출력
+	/question/list 요청에 대한 question_list.html
+	
+2. question 테이블 글 상세 출력, 해당 글에 대한 답글도 같이 출력
+	/question/detail/{id} 요청에 대해서 question_detail.html
+	
+3. 상세 페이지에서 폼 <== 답변글 등록
+	답변 글까지 등록
+	
+	
+	
