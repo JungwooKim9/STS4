@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<h1> Question List 호출 성공 변경됨 </h1>
+
+<html layout:decorate="~{layout}">
 	
 	<!-- 서버의 Model 객체에 전송된 값을 받아서 출력 -->
 	
-	<table>
-		<thead>
+	<div layout:fragment="content" class="container my-3">
+	<table class="table">
+		
+		<thead class="table-dark">
 			<tr>
 				<th>번호</th>
 				<th>제목</th>
@@ -18,8 +14,9 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="question: ${questionList}">
-				<td th:text="${question.id}">번호</td>
+			<!-- loop.count: list의 방번호를 1번부터 출력 -->
+			<tr th:each="question, loop: ${questionList}">
+				<td th:text="${loop.count}">번호</td>
 				
 				<td>
 					
@@ -27,10 +24,13 @@
 					
 				</td>
 
-				<td th:text="${question.createDate}">작성일시</td>
+				<td th:text="${#temporals.format(question.createDate, 'yyyy-MM-dd HH:mm')}">작성일시</td>
 			</tr>
 		</tbody>
 	</table>
 	
-</body>
+	<a th:href="@{/question/create}" class="btn btn-primary"> 질문 등록 하기 </a>
+	
+	</div>
+
 </html>

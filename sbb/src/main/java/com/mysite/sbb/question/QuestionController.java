@@ -4,9 +4,14 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.annotation.RequestScope;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor	// 생성자를 이용한 객체 주입 방식: class 내부의 final이 붙은 변수에 객체를 주입
@@ -57,5 +62,30 @@ public class QuestionController {
 		return "question_detail";
 	}
 	
+	// 질문 등록 요청(get)
+	@GetMapping("/question/create")
+	public String questionCreate(QuestionForm questionForm) {
+		return "question_form";
+	}
+	
+	// 폼에서 제목과 내용을 받아서 DB에 등록 로직
+	@PostMapping("/question/create")
+//	public String questionCreate(@RequestParam String subject, @RequestParam String content) {
+	public String questionCreate(@Valid QuestionForm questionForm, BindingResult bindingResult) {
+	
+		// 제목과 내용을 받아서 DB에 저장
+		System.out.println("제목(dto): " + questionForm.getSubject());
+		System.out.println("내용(dto): " + questionForm.getContent());
+		
+		// 유효성 검사 후 DB 저장함
+		if(bindingResult.hasErrors()) {
+			return "question_form";
+		}
+		
+		// DB에 저장
+		questionService.create(questionForm.getSubject(), questionForm.getContent());
+		
+		return "redirect:/question/list";
+	}
 	
 }

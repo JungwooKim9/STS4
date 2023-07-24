@@ -12,6 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,7 +32,8 @@ public class Answer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(columnDefinition = "text")
+//	@Column(columnDefinition = "text")		// Oracle DB에 존재하지 않는 자료형
+	@Column(length=4000)
 	private String content;
 	
 	@CreatedDate
