@@ -2,6 +2,7 @@ package com.mysite.sbb.answer;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.mysite.sbb.question.Question;
 import com.mysite.sbb.question.QuestionService;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RequestMapping("/answer")
@@ -25,7 +27,7 @@ public class AnswerController {
 	
 	@PostMapping("/create/{id}")	//	/answer/create/{id}
 	public String createAnswer(Model model, @PathVariable Integer id,
-			@RequestParam String content) {
+			@Valid AnswerForm answerForm, BindingResult bindingResult) {
 		
 		// id 변수가 잘 넘어오는지 출력
 //		System.out.println("=====id: " + id + " =====");
@@ -35,8 +37,16 @@ public class AnswerController {
 		// 1. 변수: id의 값으로 Question 객체를 받아와야 함.
 		Question question = questionService.getQuestion(id);
 		
+		// 유효성 검사를 확인 후 다음 스탭 진행
+		if (bindingResult.hasErrors()) {
+			// 오류가 발생 되었을 때 뷰 페이지에서 머물면서 오류 메세지 출력
+			
+			model.addAttribute("question", question);
+			return "question_detail";
+		}
+		
 		// 2. Service에서 변수 2개를 넣어서 값을 Insert
-		answerService.create(question, content);
+		answerService.create(question, answerForm.getContent());
 		
 		// question_detail로 리턴: get 방식으로 URL로 redirect
 		return String.format("redirect:/question/detail/%s", id);

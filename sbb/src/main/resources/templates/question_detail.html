@@ -32,8 +32,21 @@
     </div>
     <!-- 답변 반복 끝  -->
     <!-- 답변 작성 -->
-    <form th:action="@{|/answer/create/${question.id}|}" method="post" class="my-3">
-        <textarea name="content" id="content" rows="10" class="form-control"></textarea>
+    <form th:action="@{|/answer/create/${question.id}|}" th:object="${answerForm}" method="post" class="my-3">
+		
+		<!-- 외부의 파일을 불러들임 -->
+		<div th:replace="~{formErrors::formErrorsFragment}"></div>
+		
+			<!-- 유효성 체크 출력 부분 시작 --> 
+			<div class="alert alert-danger" role="alert" th:if="${#fields.hasAnyErrors()}">
+				<div th:each = "err : ${#fields.allErrors()}" th:text ="${err}"></div>
+				
+			</div>
+			<!-- 유효성 체크 출력 부분 끝 --> 
+			
+        <textarea th:field="*{content}" rows="10" class="form-control"></textarea>
+        <!-- th:field="*{content}"	<== name="content", id="content", value="content" -->
+        
         <input type="submit" value="답변등록" class="btn btn-primary my-2">
     </form>
 </div>

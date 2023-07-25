@@ -3,6 +3,8 @@ package com.mysite.sbb.question;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -75,6 +77,7 @@ public interface QuestionRepository extends JpaRepository<Question, Integer> {
 	// 제목을 기준으로 내림차순 정렬
 //	List<Question> findAllBySubjectDesc();
 
-	
+	// Question (질문)테이블의 페이징 처리
+	Page<Question> findAll(Pageable pageable);
 	
 }

@@ -2,18 +2,23 @@ package com.mysite.sbb.question;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.annotation.RequestScope;
+
+import com.mysite.sbb.answer.AnswerForm;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
+@RequestMapping("/question")
 @RequiredArgsConstructor	// 생성자를 이용한 객체 주입 방식: class 내부의 final이 붙은 변수에 객체를 주입
 @Controller
 public class QuestionController {
@@ -26,22 +31,25 @@ public class QuestionController {
 	private final QuestionService questionService;
 	
 	// client의 /question/list 요청을 처리하는 메소드: http://localhost:9696/question/list
-	@GetMapping("/question/list")
-	public String list(Model model) {
+	// 리스트
+	
+	// http://localhost:9696/question/list?page=1
+	@GetMapping("/list")	//	/question/list
+	public String list(Model model, @RequestParam(value="page", defaultValue="0") int page) {
 		// 1. client 요청을 받는다. http://localhost:9696/question/list
 		
 		// 2. 비즈니스 로직 처리
-		List<Question> questionList = questionService.getList();
+		Page<Question> paging = questionService.getList(page);
 		
 		// 3. 받아온 List를 client로 전송 (Model 객체에 저장해서 Client로 전송)
-		model.addAttribute("questionList", questionList);
+		model.addAttribute("paging", paging);
 		
 		return "question_list";
 	}
 	
 	// 상세 내용
-	@GetMapping("/question/detail/{id}")
-	public String detail(@PathVariable Integer id, Model model) {
+	@GetMapping("/detail/{id}")
+	public String detail(@PathVariable Integer id, Model model, AnswerForm answerForm) {
 		
 //		System.out.println("===== id 변수에 들어오는 값 출력 =====");
 //		System.out.println(id);
@@ -63,13 +71,13 @@ public class QuestionController {
 	}
 	
 	// 질문 등록 요청(get)
-	@GetMapping("/question/create")
+	@GetMapping("/create")
 	public String questionCreate(QuestionForm questionForm) {
 		return "question_form";
 	}
 	
 	// 폼에서 제목과 내용을 받아서 DB에 등록 로직
-	@PostMapping("/question/create")
+	@PostMapping("/create")
 //	public String questionCreate(@RequestParam String subject, @RequestParam String content) {
 	public String questionCreate(@Valid QuestionForm questionForm, BindingResult bindingResult) {
 	
