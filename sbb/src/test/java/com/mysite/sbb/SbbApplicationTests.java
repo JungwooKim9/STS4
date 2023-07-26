@@ -530,7 +530,7 @@ class SbbApplicationTests {
 		}
 		
 		// 페이징 처리를 위한 Question 테이블의 레코드 1000개 insert
-		@Test
+//		@Test
 		public void insert1000Question() {
 			for (int i=1; i<=1000; i++) {
 				Question q = new Question();
