@@ -1,9 +1,13 @@
 package com.mysite.sbb.user;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import com.mysite.sbb.DataNotFoundException;
 
 import lombok.RequiredArgsConstructor;
 
@@ -36,6 +40,41 @@ public class UserService {
 		
 		
 		return user;
+	}
+	
+	// 사용자 정보를 읽어오는 메소드
+	public void selectUser(String username) {
+		
+		Optional<SiteUser> Ouser=
+		userRepository.findByusername(username);
+		
+		// 
+		if(Ouser.isPresent()) {
+			System.out.println(username + "는 존재하는 사용자 입니다.");
+			
+			SiteUser user = Ouser.get();
+			System.out.println("username: " + user.getUsername());
+			System.out.println("email: " + user.getEmail());
+			System.out.println("password: " + user.getPassword());
+			
+		}else {
+			System.out.println(username + "는 존재하지 않는 사용자 입니다.");
+		}
+	}
+	
+	// username을 받아서 DB에서 값을 읽어오는 메소드
+	public SiteUser getUser(String username) {
+		
+		Optional <SiteUser> _siteUser = userRepository.findByusername(username);
+		
+		if ( _siteUser.isPresent()) {
+			// 값이 DB에 존재할 경우
+			return _siteUser.get();
+		}else {
+			// 값이 DB에 존재하지 않는 경우
+			throw new DataNotFoundException("사용자가 DB에 존재하지 않습니다.");
+		}
+		
 	}
 	
 }
