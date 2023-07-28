@@ -23,13 +23,24 @@
 	<!-- 모든 페이지가 적용되는 html --> 
 	<th:block layout:fragment="content"> </th:block>
 	
-	
-	
 	<br> 
 	하단 푸터 
 
     <!-- Bootstrap JavaScript -->
     <script th:src="@{/bootstrap.min.js}"></script>
+	
+	<script type="text/javascript">
+		// 글 삭제시 자바스크립트 블락
+		const delete_elements = document.getElementsByClassName("delete");
+		
+		Array.from(delete_elements).forEach (function(element) {
+			element.addEventListener('click', function(){
+				if(confirm("삭제 하시겠습니까?")){
+				location.href = this.dataset.uri;
+				};
+			});
+		});
+	</script>
 
 </body>
 </html>

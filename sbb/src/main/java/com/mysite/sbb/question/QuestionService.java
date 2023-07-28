@@ -82,9 +82,25 @@ public class QuestionService {
 		question.setCreateDate(LocalDateTime.now());
 		question.setAuthor(siteUser);
 		
-		questionRepository.save(question); 
+		questionRepository.save(question);
 		
 	}
 	
+	// 글 수정: save()
+	public void modify(Question question, String subject, String content) {
+		
+		question.setSubject(subject);
+		question.setContent(content);;
+		question.setCreateDate(LocalDateTime.now());
+		
+		questionRepository.save(question);
+	}
+	
+	// 글 삭제: delete(): delete할 question 객체를 가지고 와서 인풋
+	public void delete(Question question) {
+		
+		questionRepository.delete(question);
+		
+	}
 
 }

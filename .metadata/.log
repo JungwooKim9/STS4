@@ -6745,3 +6745,333 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-27 17:55:32.609
 !MESSAGE Classpath changed for project: sbb
+!SESSION 2023-07-28 09:44:33.581 -----------------------------------------------
+eclipse.buildId=4.19.0.202306150758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.emf.ecore 2 0 2023-07-28 09:44:34.263
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY org.eclipse.jface 2 0 2023-07-28 09:44:37.287
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-07-28 09:44:37.287
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-28 09:44:41.394
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\sts-4.19.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\jre\bin\javaw.exe
+-cp
+C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\classes;C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Dlsp.completions.indentation.enable=true
+-Xmx1024m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\sts-4.19.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.47.0.202306150731\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/workspace-STS4/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1690505081393
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 09:44:41.394
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-07-28 09:44:41.411
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 10696
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-07-28 09:44:41.483
+!MESSAGE org.springframework.ide.vscode.commons.protocol.spring.SpringModelLanguageServer cannot be found by org.springframework.tooling.boot.ls_1.47.0.202306150731
+!STACK 0
+java.lang.ClassNotFoundException: org.springframework.ide.vscode.commons.protocol.spring.SpringModelLanguageServer cannot be found by org.springframework.tooling.boot.ls_1.47.0.202306150731
+	at org.eclipse.osgi.internal.loader.BundleLoader.generateException(BundleLoader.java:541)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:536)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:416)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:622)
+	at org.eclipse.lsp4e.LanguageServersRegistry$ExtensionLanguageServerDefinition.getServerInterface(LanguageServersRegistry.java:196)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$1(LanguageServerWrapper.java:291)
+	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-07-28 09:44:42.161
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\hi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 09:44:42.249
+!MESSAGE Boot project ADDED: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 09:44:42.250
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 09:44:42.251
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 09:44:42.252
+!MESSAGE Boot project ADDED: test_project_gradle
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 09:44:42.297
+!MESSAGE Boot project ADDED: test_project_maven
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 09:44:42.297
+!MESSAGE Boot project ADDED: test_sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:16:24.157
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:38:07.223
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.eclipse.jface 2 0 2023-07-28 10:39:44.006
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-07-28 10:39:44.006
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:40:29.414
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:43:01.041
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:44:10.053
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:44:33.251
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:44:39.582
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:45:52.548
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:48:00.755
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:51:04.849
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:51:28.095
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:51:40.228
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:52:04.172
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:54:00.726
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 10:57:40.381
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:04:12.002
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 11:04:18.039
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 13:09:35.664
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 13:09:50.988
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 14:35:18.747
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 14:37:44.222
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 14:39:50.772
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 14:39:58.451
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 14:41:26.204
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 14:43:59.301
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 14:48:10.220
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 14:51:00.987
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 14:53:00.524
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 14:54:24.556
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:22:00.657
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:24:04.686
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:25:10.489
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:25:49.428
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:26:41.247
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:51:59.061
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:52:41.591
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:54:00.885
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:54:47.284
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:55:14.597
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:55:44.252
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:56:57.910
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 15:59:17.385
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:01:59.452
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:04:23.002
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:04:34.280
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:05:18.502
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:07:25.793
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:08:28.516
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:08:35.579
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:08:43.979
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:08:48.706
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:09:09.143
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:09:12.379
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:14:10.598
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:16:18.784
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:16:47.472
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:17:53.810
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 16:44:30.046
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 17:10:56.458
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 17:10:59.761
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 17:15:38.432
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 17:17:52.914
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 17:34:52.212
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 17:44:17.016
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 17:44:30.615
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 17:45:12.853
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 17:45:51.874
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 17:46:26.445
+!MESSAGE Classpath changed for project: sbb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-28 17:48:37.958
+!MESSAGE Classpath changed for project: sbb
