@@ -33,7 +33,7 @@ public class QuestionService {
 	}
 	
 	// 페지징 처리해서 리턴으로 돌려줌 <사용> 
-	public Page<Question> getList(int page){
+	public Page<Question> getList(int page, String kw){
 		
 		// Pageable 객체에 특정 컬럼을 정렬할 객체를 생성해서 인자로 넣어줌 
 		// Sort Import시 주의 : org.springframework.data.domain.Sort; 
@@ -45,13 +45,15 @@ public class QuestionService {
 		// createDate 컬럼을 desc 
 		Pageable pageable = PageRequest.of(page, 10, Sort.by(sorts)); 
 		
-		Page<Question> pageQuestion = questionRepository.findAll(pageable); 
+		//Page<Question> pageQuestion = questionRepository.findAll(pageable); 
+		Page<Question> pageQuestion = questionRepository.findAllByKeyword(kw, pageable);
+		
 		
 		return pageQuestion; 
 	}
 	
 	
-	//글 상세 페이지 
+	//글 상페 페이지 
 	public Question getQuestion(Integer id) {
 		// findById(?)
 		// select * from question where id = ?; 
@@ -82,38 +84,43 @@ public class QuestionService {
 		question.setCreateDate(LocalDateTime.now());
 		question.setAuthor(siteUser);
 		
-		questionRepository.save(question);
+		questionRepository.save(question); 
 		
 	}
 	
-	// 글 수정: save()
-	public void modify(Question question, String subject, String content) {
+	// 글수정 : save()
+	public void modify ( Question question, String subject , String content) {
 		
 		question.setSubject(subject);
-		question.setContent(content);;
+		question.setContent(content);
 		question.setModifyDate(LocalDateTime.now());
 		
-		questionRepository.save(question);
+		questionRepository.save(question); 
+		
 	}
 	
-	// 글 삭제: delete(): delete할 question 객체를 가지고 와서 인풋
+	//글 삭제 : delete()  :  delete 할 question 객체를 가지고 와서 인풋 
 	public void delete(Question question) {
+			
+		questionRepository.delete(question); 
 		
-		questionRepository.delete(question);
+	}
+	
+	// 글 추천 등록 메소드 
+	public void vote(Question question, SiteUser siteuser) {
+		
+		//question.getVoter()   <=== Set 
+		question.getVoter().add(siteuser); 
+		
+		//주의 : 
+		//question.setVoter(siteuser);
+		
+		
+		questionRepository.save(question); 
 		
 	}
 
-	// 글 추천 등록 메소드
-	public void vote(Question question, SiteUser siteuser) {
-		
-		// question.getVoter()	<== Set
-		question.getVoter().add(siteuser);
-		
-		// 주의:
-		// question.setVoter(siteuser);
-		
-		questionRepository.save(question);
-		
-	}
 	
+	
+
 }

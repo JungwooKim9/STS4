@@ -29,6 +29,9 @@
     <!-- Bootstrap JavaScript -->
     <script th:src="@{/bootstrap.min.js}"></script>
 	
+	<!-- 각 페이지에서만 사용하는 자바스크립트 블락 -->
+	<th:block layout:fragment="script"></th:block>
+	
 	<script type="text/javascript">
 		// 글 삭제시 자바스크립트 블락
 		const delete_elements = document.getElementsByClassName("delete");
@@ -51,6 +54,8 @@
 				};
 			});
 		});
+		
+
 		
 	</script>
 
