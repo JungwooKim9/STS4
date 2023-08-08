@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter"/>
     <fullyQualifiedTypeName name="org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter.XFrameOptionsMode"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="com.mysite.sbb.user.SiteUser"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.mysite.sbb.user.UserService"/>
+    <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j2"/>
 </qualifiedTypeNameHistroy>
