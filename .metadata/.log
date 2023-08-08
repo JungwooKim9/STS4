@@ -8956,3 +8956,18 @@ org.eclipse.jdt.internal.compiler.problem.AbortCompilation: Pb(347) The type org
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-08 15:19:22.637
 !MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-08 15:27:45.995
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-08 15:28:10.319
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-08 15:28:23.530
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-08 15:28:49.142
+!MESSAGE Classpath changed for project: shop
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-08 15:30:48.198
+!MESSAGE Classpath changed for project: shop

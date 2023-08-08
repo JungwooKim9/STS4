@@ -15,22 +15,24 @@ import com.mysite.shop.dto.MainItemDto;
 class ItemServiceTest {
 	
 	@Autowired
-	ItemService itemService;
+	ItemService itemService; 
+
 	
 	@Test
 	void testGetMainItemPage() {
 		
-		ItemSearchDto itemSearchDto = new ItemSearchDto();
+		ItemSearchDto itemSearchDto = new ItemSearchDto(); 
 		itemSearchDto.setSearchQuery("가방");
 		
-		Pageable pageable = PageRequest.of(0, 6);
+		Pageable pageable = PageRequest.of( 0, 6);
+
+		Page<MainItemDto>  main = 
+				itemService.getMainItemPage(itemSearchDto, pageable); 
 		
-		Page<MainItemDto> main =
-				itemService.getMainItemPage(itemSearchDto, pageable);
-		
-		System.out.println("=============================");
+		System.out.println("================================");
 		System.out.println(main.getTotalElements());
-		System.out.println("=============================");
+		System.out.println("================================");
+		
 	}
 
 }

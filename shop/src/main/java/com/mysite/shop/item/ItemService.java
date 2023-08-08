@@ -26,7 +26,7 @@ import com.mysite.shop.dto.MainItemDto;
 
 @Log4j2
 @Service
-@Transactional			// 클래스 내부의 메소드가 하나의 트랜잭션으로 처리하도록 함
+@Transactional				// 클래스 내부의 메소드가 하나의 트랜잭션으로 처리하도록 함. 
 @RequiredArgsConstructor
 public class ItemService {
 
@@ -43,15 +43,16 @@ public class ItemService {
     	// item Entity 클래스의 Setter로 주입후 Repository 의 save 메소드로 장 
         Item item = itemFormDto.createItem();
         /*
-        System.out.println("==========서버로 배포후에는 log.info()===========");
+        System.out.println("=========서버로 배포후에는 log.info()=================");
         log.info("==> " + item.getItemNm());
         log.info("==> " + item.getPrice());
         log.info("==> " + item.getStockNumber());
         log.info("==> " + item.getItemDetail());
         log.info("==> " + item.getItemSellStatus());
-        */
+        */ 
         itemRepository.save(item);
         
+
         //이미지 등록
         for(int i=0;i<itemImgFileList.size();i++){
         	
@@ -124,8 +125,8 @@ public class ItemService {
 
     @Transactional(readOnly = true)
     public Page<MainItemDto> getMainItemPage(ItemSearchDto itemSearchDto, Pageable pageable){
-//        return itemRepository.getMainItemPage(itemSearchDto, pageable);
-        return itemRepository.getMainItemPage_T(pageable);
+        return itemRepository.getMainItemPage(itemSearchDto, pageable);
+    	//return itemRepository.getMainItemPage_T( pageable);
     }
 
 }
