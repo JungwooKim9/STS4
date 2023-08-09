@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter.XFrameOptionsMode"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
@@ -32,7 +28,6 @@
     <fullyQualifiedTypeName name="org.springframework.security.web.util.matcher.AntPathRequestMatcher"/>
     <fullyQualifiedTypeName name="jakarta.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="com.mysite.sbb.DataNotFoundException"/>
-    <fullyQualifiedTypeName name="org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="com.mysite.sbb.question.QuestionService"/>
     <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
@@ -41,7 +36,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="jakarta.validation.Valid"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
-    <fullyQualifiedTypeName name="org.springframework.security.access.prepost.PreAuthorize"/>
     <fullyQualifiedTypeName name="org.springframework.web.server.ResponseStatusException"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="jakarta.persistence.ManyToMany"/>
@@ -55,9 +49,15 @@
     <fullyQualifiedTypeName name="org.commonmark.parser.Parser"/>
     <fullyQualifiedTypeName name="org.commonmark.node.Node"/>
     <fullyQualifiedTypeName name="org.commonmark.renderer.html.HtmlRenderer"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
     <fullyQualifiedTypeName name="com.mysite.sbb.user.SiteUser"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.mysite.sbb.user.UserService"/>
     <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j2"/>
+    <fullyQualifiedTypeName name="org.springframework.data.repository.query.Param"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
+    <fullyQualifiedTypeName name="com.mysite.shop.dto.MainItemDto"/>
+    <fullyQualifiedTypeName name="org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity"/>
+    <fullyQualifiedTypeName name="org.springframework.security.access.prepost.PreAuthorize"/>
 </qualifiedTypeNameHistroy>

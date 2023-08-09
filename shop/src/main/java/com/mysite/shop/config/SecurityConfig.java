@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -14,6 +15,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.mysite.shop.member.MemberService;
 
+@EnableMethodSecurity	// Controller에서 인증된 사용자만 접근: @PreAuthorize("isAuthenticated()")
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -62,7 +64,8 @@ public class SecurityConfig {
 				.usernameParameter("email")
 				//.passwordParameter("password")
 				
-				// MemberService에서 인증 처리를 하고 있음
+				// MemberService에서 인증 처리를 하고 있음. 
+				
 				
 				.failureUrl("/members/login/error")
 
@@ -75,6 +78,7 @@ public class SecurityConfig {
 				.logoutSuccessUrl("/")
 				.invalidateHttpSession(true))
 		
+		//.csrf().disable()
 		
 		;
         

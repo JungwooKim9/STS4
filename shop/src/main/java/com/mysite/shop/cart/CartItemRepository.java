@@ -9,6 +9,9 @@ import java.util.List;
 
 public interface CartItemRepository extends JpaRepository<CartItem, Long> {
 
+	// JPQL: 메소드로 쿼리를 처리하는 언어
+	// ORM: 메소드를 SQL 쿼리로 매핑: JPA <=== 하이버네이트
+	// select * from CartItem where cart_id=? and item_id=?
     CartItem findByCartIdAndItemId(Long cartId, Long itemId);
 
     
@@ -26,4 +29,16 @@ public interface CartItemRepository extends JpaRepository<CartItem, Long> {
   //  List<CartDetailDto> findCartDetailDtoList(Long cartId);
    List<CartDetailDto> findCartDetailDtoList(@Param("cartId") Long cartId);
 
+    /* ANSI JOIN
+    
+	select ci.count , i.item_nm, i.price, ii.img_url
+		from cart_item ci
+			JOIN item i
+				ON ci.item_id=i.item_id
+			JOIN item_img ii
+				ON ii.item_id=i.item_id
+	where cart_id=52 and ii.repimg_yn='Y';
+     */
+    
+    
 }

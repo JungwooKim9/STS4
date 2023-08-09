@@ -46,6 +46,8 @@ public class CartService {
         }
         
         // 기존에 장바구니에 등록하는 제품이 cartItem 테이블에 존재하는지 확인         
+        	// 장바구니에 존재하지 않으면 insert
+        	// 장바구니에 존재하면 갯수만 update
         CartItem savedCartItem = cartItemRepository.findByCartIdAndItemId(cart.getId(), item.getId());
 
         if(savedCartItem != null){   //기존에 제품이 장바구니에 존재하면 count (갯수)만 update
