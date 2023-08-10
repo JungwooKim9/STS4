@@ -38,6 +38,7 @@ public class OrderService {
 
     private final ItemImgRepository itemImgRepository;
 
+    // 장바구니에서 값을 읽어 와서 주문 테이블에 저장하는 메소드
     public Long order(OrderDto orderDto, String email){
 
         Item item = itemRepository.findById(orderDto.getItemId())

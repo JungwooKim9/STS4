@@ -96,13 +96,22 @@ public class CartController {
 
         List<CartOrderDto> cartOrderDtoList = cartOrderDto.getCartOrderDtoList();
         
-        // client에서 넘기는 order 정보의 내용을 출력 
+        // List 객체에 저장된 값을 출력
+        /*
+        System.out.println("================================");
+        for(int i=0; i<cartOrderDtoList.size(); i++) {
+        	System.out.println(cartOrderDtoList.get(i).getCartItemId());
+        }
+        System.out.println("================================");
+        */
+        
+        // client에서 넘기는 order 정보의 내용을 출력
         for ( int i = 0 ; i < cartOrderDtoList.size() ; i++) {
         	CartOrderDto cartOrderDto1 = cartOrderDtoList.get(i); 
         	
         	System.out.println(">>>>>>>>>>>>>>>" +  cartOrderDto1.getCartItemId());
         	
-        }        
+        }
 
         if(cartOrderDtoList == null || cartOrderDtoList.size() == 0){
             return new ResponseEntity<String>("주문할 상품을 선택해주세요", HttpStatus.FORBIDDEN);
