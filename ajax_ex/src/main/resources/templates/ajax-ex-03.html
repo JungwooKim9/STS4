@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<title>03_get 요청하기: parameter 값을 서버로 전송</title>
+</head>
+<body>
+	<h1>03_get 요청하기: parameter 값을 서버로 전송</h1>
+	<button onclick="ex03Fn()">ex03 함수 호출</button>
+	
+	<script type="text/javascript">
+		const ex03Fn = () => {
+			// console.log("함수 호출 성공");
+			// alert ("함수 호출 성공");
+			
+			// 서버와 동기 통신: 서버에서 전체 페이지가 랜더링 되어서 client로 전송, 페이지가 리프레쉬 됨
+			// 서버와 비동기 통신: client의 특정 부분만 변경
+			var val1 = "Hello Ajax"
+			
+			$.ajax({
+				
+				url : "/ajax/ex03",		// 서버에게 요청을 보내는 URL
+				type: "get", 			// 서버에게 요청을 보내는 방식: get(= 가져와라, select), post(= insert 해라)
+					// data: 서버로 전송할 data
+				data: {"param1" : val1,
+						"param2" : "안녕"
+				
+				},
+				
+				success: function(res) {	// 요청이 성공 되었을 때 서버에서 보내는 값을 받음
+											// res: 서버에서 보내는 값을 할당 받음
+					console.log("서버와 통신 성공: " + res);
+					alert("서버와 통신 성공: " + res);
+				},
+				error : function () {	// 서버와 통신이 실패 했을 때 작동됨
+					console.log("서버와 통신 실패", res);
+					alert("서버와 통신 실패", res);
+					
+				}
+				
+			});
+			
+			
+			
+		}
+		
+		
+	</script>
+</body>
+</html>

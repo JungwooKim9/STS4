@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<title>@ResponseEntity를 사용해서 DTO, http 상태코드</title>
+</head>
+<body>
+	<h1>@ResponseEntity를 사용해서 DTO, http 상태코드</h1>
+	<button onclick="ex09Fn()">ex09 함수 호출</button>
+	
+	<script type="text/javascript">
+		const ex09Fn = () => {
+			// console.log("함수 호출 성공");
+			// alert ("함수 호출 성공");
+			
+			// 서버와 동기 통신: 서버에서 전체 페이지가 랜더링 되어서 client로 전송, 페이지가 리프레쉬 됨
+			// 서버와 비동기 통신: client의 특정 부분만 변경
+			var val1 = "Hello Ajax : 09"
+			
+			// JavaScript 객체 타입
+			const params = {param1 : val1,
+							param2 : "안녕"
+			}
+			
+			
+			
+			$.ajax({
+				
+				url : "/ajax/ex09",		// 서버에게 요청을 보내는 URL
+				type: "post", 			// 서버에게 요청을 보내는 방식: get(= 가져와라, select), post(= insert 해라)
+					// data: 서버로 전송할 data
+				data: JSON.stringify(params),
+				contentType: "application/json",
+				
+				success: function(res,state) {	// 요청이 성공 되었을 때 서버에서 보내는 값을 받음
+											// res: 서버에서 보내는 값을 할당 받음
+					console.log("서버와 통신 성공: " + res);
+					console.log("객체: " + res.param1);
+					console.log("객체: " + res.param2);
+					console.log("http 상태 코드: " + state)
+					
+				},
+				error : function () {	// 서버와 통신이 실패 했을 때 작동됨
+					console.log("서버와 통신 실패");
+					alert("서버와 통신 실패");
+					
+				}
+				
+			});
+			
+			
+			
+		}
+		
+		
+	</script>
+</body>
+</html>
