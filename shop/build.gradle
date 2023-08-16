@@ -82,22 +82,21 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-// === Querydsl 빌드 옵션 (선택사항) ===
-//def querydslDir = "$buildDir/generated/querydsl"
-def querydslDir = "src/generated/querydsl"
-querydsl {
-	jpa = true
-	querydslSourcesDir = querydslDir
-}
+
+// queryDSL Setting
+
+// Q클래스, Q도메인: @Entity 클래스 이름 앞에 Q클래스가 자동으로 생성될 위치
+def querydslDir = "$buildDir/generated/querydsl"
 
 sourceSets {
-	main.java.srcDir querydslDir
+	main.java.srcDirs += [ querydslDir]
 }
 
-configurations {
-	querydsl.extendsFrom compileClasspath
+tasks.withType(JavaCompile) {
+	options.generatedSourceOutputDirectory = file(querydslDir)
 }
 
-compileQuerydsl {
-	options.annotationProcessorPath = configurations.querydsl
+// Q클래스 삭제: 원본(Entity 클래스)이 수정, 변경 되면 삭제 후 새로 생성해야함
+clean.doLast {
+	file(querydslDir).deleteDir()
 }
